@@ -1,0 +1,28 @@
+{
+  
+    "manifest_version": 2,
+    "name": "PersonalFirebase",
+    "description": "This sample shows how to authorize Firebase in a Chrome extension using a Google account.",
+    "version": "2.1",
+    "icons": {
+      "128": "firebase.png"
+    },
+    "browser_action": {
+      "default_icon": "icons/firebase.png",
+      "default_popup": "popup.html"
+
+    },
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": true
+
+
+    },
+    "permissions": [
+      "identity",
+      "activeTab","declarativeContent", "storage","contextMenus"
+    ],
+  "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
+
+
+}
